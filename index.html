@@ -14,20 +14,20 @@
 	<body>
 		<h1>Password Generator</h1>
 		<!-- This is the primary button to begin the prompt sequence -->
-		<button onclick="myFunction()">Create Password</button>
+		<button onclick="setLength()">Create Password</button>
 
 		<p id="demo"></p>
 
 		<script>
-			function myFunction() {
+			function setLength() {
 				var txt;
 				var length = prompt(
 					"Please enter a value from 8 to 128 for password length"
 				);
-				if (length == null || person == "") {
+				if (length < 8 || length > 128) {
 					txt = "Invalid response";
 				} else {
-					txt = "Hello " + person + "! How are you today?";
+					txt = "Okay" + length;
 				}
 				document.getElementById("demo").innerHTML = txt;
 			}
